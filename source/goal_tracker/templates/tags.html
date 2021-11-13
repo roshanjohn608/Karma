@@ -1,0 +1,12 @@
+{% extends 'blank.html' %}
+
+{% block content %}
+<h1>Tags</h1>
+<table class="table">
+<tr>
+	{% for t in tag_list %}
+<td><a href="{% url 'tag_detail' t.id %}">{{t.tag_name}}</a></td></br>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}
